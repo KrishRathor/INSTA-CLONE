@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='registerstyle.css')}}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+    <title>Register</title>
+</head>
+<body>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{category}} alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+
+    <h1 id="heading">Register Page</h1>
+    <br>
+    <div id="registerform">
+        <form method="POST">
+
+            {{ form.hidden_tag() }}
+
+            <h1 style="margin-left:1vw;">Please Create Your Account</h1>
+
+            {{ form.username.label(class="label") }}
+            <br>
+            {{ form.username(class="formInput", placeholder="Username") }}
+
+            <br>
+
+            {{ form.email_id.label(class="label") }}
+            <br>
+            {{ form.email_id(class="formInput", placeholder="Email Address") }}
+
+            <br>
+
+            {{ form.password1.label(class="label") }}
+            <br>
+            {{ form.password1(class="formInput", placeholder="Password") }}
+
+            <br>
+
+            {{ form.password2.label(class="label") }}
+            <br>
+            {{ form.password2(class="formInput", placeholder="Confirm Password") }}
+
+            {{ form.submit.label(class="label") }}
+            {{ form.submit(class="formInput cusbtn") }}
+
+            <br>
+
+            <a href="{{ url_for('home_page') }}">Already Registered? Sign In</a>
+
+        </form>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+#topSection {
+    display: flex;
+}
+
+#profilePick {
+    height: 18vh;
+    width: 10vw;
+    border: 2px solid black;
+    margin-top: 3vh;
+}
+
+.imageinput {
+    width: 20vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+#rightsection {
+    border: 2px solid black;
+    width: 50vw;
+    margin-left: 3vw;
+    margin-top: 2vh;
+}
+
+#stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2vh;
+}
+
+.post {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.post-item {
+    width: 33%;
+    margin-left: 2vw;
+}

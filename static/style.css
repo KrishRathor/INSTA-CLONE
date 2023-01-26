@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url(instabackground.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#login {
+    border: 2px solid black;
+    width: 22%;
+    height: 50vh;
+    position: relative;
+    left: 70%;
+    top: 27vh;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+#login h1 {
+    font-family: cursive;
+    text-align: center;
+    font-weight: bolder;
+}
+
+#login a {
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}

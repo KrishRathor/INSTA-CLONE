@@ -1,0 +1,17 @@
+.postContainer {
+    background-color: aliceblue;
+    width: 30vw;
+    margin: auto;
+}
+
+.postContainer h3 {
+    margin-left: 1vw;
+    margin-top: 3vh;
+    font-family: cursive;
+}
+
+.postContainer img {
+    width: 30vw;
+    height: 40vh;
+    margin-top: 2vh;
+}
